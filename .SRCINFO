@@ -1,5 +1,5 @@
 pkgbase = vcpkg
-	pkgdesc = C++ library manager for Windows, Linux, and MacOS
+	pkgdesc = C++ library manager
 	pkgver = 2024.04.26
 	pkgrel = 1
 	url = https://github.com/microsoft/vcpkg
@@ -7,7 +7,7 @@ pkgbase = vcpkg
 	arch = x86_64
 	arch = aarch64
 	license = MIT
-	makedepends = cmake>=3.3.0
+	makedepends = cmake
 	makedepends = ninja
 	depends = curl
 	depends = zip
@@ -18,13 +18,9 @@ pkgbase = vcpkg
 	source = vcpkg.conf
 	sha256sums = 2d7eaeaf0318f25306cf995d4f399b43953c9cb1e54b689d850f6ce0f0e7ef48
 	sha256sums = 02a6d2bca471adedfc7acc9ba57860d976ec5115b282cb1a96341850e1c7b221
-	source_x86_64 = vcpkg-x86_64.csh
 	source_x86_64 = vcpkg-x86_64.sh
-	sha256sums_x86_64 = 6afa87afff491f6090c4ade5a9249942f9d503708f81c4cfea5ca22f6b96adba
-	sha256sums_x86_64 = 851f32d41ce7ec0140b8fe4cf1acbb1e8bab18b0d899d12a202558a270d5a4bb
-	source_aarch64 = vcpkg-aarch64.csh
+	sha256sums_x86_64 = 65c6e38406f5c9b519343f5ea1c7bf61c5dafcf165f61c020b8f2308d1da286c
 	source_aarch64 = vcpkg-aarch64.sh
-	sha256sums_aarch64 = 0f26682199cf81c3f9f8c86d7bfbcd0992c9758028e404d4daa63fea8945a947
-	sha256sums_aarch64 = 4c6a7ae3f537d2299ad6b3bbde568987d79bd899243460207736a2f1bc6829ea
+	sha256sums_aarch64 = 681372285eda5137ec00b20d7f8d12e9e4d72596125ab725d4fdeddca9783ac6
 
 pkgname = vcpkg
