@@ -5,7 +5,7 @@
 
 pkgname=vcpkg
 pkgver=2024.04.26
-pkgrel=1
+pkgrel=2
 pkgdesc='C++ library manager'
 depends=('curl' 'zip' 'unzip')
 makedepends=('cmake' 'ninja')
@@ -37,17 +37,17 @@ build() {
 }
 
 package() {
-    export VCPKG_ROOT=/opt/vcpkg
+    export VCPKG_ROOT=/usr/lib/vcpkg
     export VCPKG_DOWNLOADS=/var/cache/vcpkg
 
     # vcpkg root
     install -Dm755 "${srcdir}/${pkgname}-${pkgver}/vcpkg" "${pkgdir}/${VCPKG_ROOT}/vcpkg"
     cp --preserve=mode -r \
-        "${srcdir}/${pkgname}-${pkgver}"/{docs,ports,scripts,triplets,.vcpkg-root,LICENSE.txt} \
+        "${srcdir}/${pkgname}-${pkgver}"/{docs,ports,scripts,triplets,.vcpkg-root,LICENSE.txt,vcpkg.disable-metrics} \
         "${pkgdir}/${VCPKG_ROOT}/"
 
     # default downloads root directory
-    install -dm1777 "${pkgdir}/${VCPKG_DOWNLOADS}"
+    install -dm1775 "${pkgdir}/${VCPKG_DOWNLOADS}"
 
     # reset ownerships and permissions
     chmod -R g+w "${pkgdir}/${VCPKG_ROOT}"
